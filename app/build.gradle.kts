@@ -1,20 +1,16 @@
-pluginManagement {
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-    }
+plugins {
+    id("com.android.application")
 }
 
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+android {
+    namespace = "com.driver.panjakent"
+    compileSdk = 35
 
-    repositories {
-        google()
-        mavenCentral()
+    defaultConfig {
+        applicationId = "com.driver.panjakent"
+        minSdk = 23
+        targetSdk = 35
+        versionCode = 1
+        versionName = "1.0"
     }
 }
-
-rootProject.name = "DRIVER-PANJAKENT"
-
-include(":app")
